@@ -108,7 +108,7 @@ while 1:
 #    print("frame: ",frame)
 
     apdu = evn_decrypt(frame,evn_schluessel,systemTitel,frameCounter)
-    if apdu[0:6] != "0f8000" :
+    if apdu[0:4] != "0f80" :
         continue
     else:
         print("apdu is fine: ",apdu)
